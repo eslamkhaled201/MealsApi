@@ -1,0 +1,17 @@
+header{
+    background-image: url("../img/bg2.png");
+    background-position: center ;
+    background-size: cover;
+    height: 30vh;
+    padding: 1rem 0;
+    font-family: 'Caveat', cursive;
+    border-radius: 10px;
+}
+header h1{
+    font-size: 5rem;
+
+}
+.slogan{
+    font-size: 2rem;
+
+}

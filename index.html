@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals API</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Langar&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <header class="text-white flex-column-center shadow-lg">
+        <h1>Meals API</h1>
+        <p class="slogan text-uppercase">find your meal</p>
+    </header>
+
+    <main class="p-5">
+        <aside class="shadow mr-3 rounded bg-white mb-4">
+            <h4 class="section-header text-dark text-white">Meals Categories</h4>
+            <ul id="category-list" class="row justify-content-between">
+            </ul>
+        </aside>
+
+        <section class="ml-3 meals_list mt-5">
+            <h4 id="category-name" class="section-header text-center"></h4>
+            <div id="meals_row" class="row justify-content-between">
+            
+            </div>
+
+        </section>
+
+        <section class="popUp-window hide justify-content-center align-items-center">
+            <div class="window-inner">
+                <div class="img-container">
+                    <img class="popUp-img" src="./1b257080420e2e47c24f2bacd1f97cd0_400x125.jpg" alt="meal image">
+                </div>
+                <h4 class="meal-heading"></h4>
+                <div class="meal-details rounded shadow-lg overflow-auto px-3">
+                    <h4 class="section-header text-center">Cooking steps</h4>
+                    <ul class="details-list text-left flex-column">
+                       
+                    </ul>
+                </div>
+                <!-- <i class="fas fa-arrow-alt-circle-left fa-2x" id="popUp-prev"></i>
+                <i class="fas fa-arrow-alt-circle-right fa-2x" id="popUp-next"></i> -->
+                <i class="fas fa-window-close fa-2x" id="closeIcon"></i>
+            </div>
+         
+        </section>
+
+    </main>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
