@@ -1,19 +1,16 @@
 @import "header.css";
 @import "asideList.css";
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{   
-    font-family: 'Raleway', sans-serif;
+body {
+    font-family: "Raleway", sans-serif;
 }
 
-main{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
+main {
+    width: 100%;
     position: relative;
 }
 a {
@@ -35,19 +32,19 @@ ul {
     display: flex;
     margin-bottom: 0;
 }
-.col-md-6 , .col-md-4{
+.col-md-6,
+.col-md-4 {
     padding-left: 0;
     padding-right: 0;
 }
-.flex-column-center{
+.flex-column-center {
     display: flex;
     flex-direction: column !important;
     align-items: center;
     justify-content: center;
 }
 
-
-.section-header{
+.section-header {
     width: 50%;
     margin: auto;
     position: relative;
@@ -58,7 +55,7 @@ ul {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-.section-header::after{
+.section-header::after {
     display: block;
     position: absolute;
     content: "";
@@ -67,39 +64,37 @@ ul {
     background-color: tomato;
     left: 50%;
     transform: translateX(-50%);
-    margin:  10px 0;
+    margin: 10px 0;
 }
 /* start meals list secttion */
 
-.meals_list{
-    width: 100%;
+.meals_list {
+    padding: 0 1.5rem;
 }
-.meals_list .section-header{
+.meals_list .section-header {
     margin-bottom: 2rem;
 }
-.cat-item{
-    width: 20%;
-}
-.meal_card{
+
+.meal_card {
     display: flex;
-    height:  30vh !important;
+    height: 30vh !important;
     position: relative;
     border-radius: 5px;
     overflow: hidden;
     color: tomato;
     margin-bottom: 1.5rem;
 }
-.meal_card .img-container{
+.meal_card .img-container {
     transition: filter 0.5s;
 }
-.meal_card:hover .img-container{
+.meal_card:hover .img-container {
     filter: blur(2px);
 }
-.meal_card:hover .meal-info-link{
+.meal_card:hover .meal-info-link {
     opacity: 1;
 }
 
-.meal-info-link{
+.meal-info-link {
     transition: opacity 0.5s;
     position: absolute;
     background-color: rgba(241, 241, 241, 0.829);
@@ -111,14 +106,14 @@ ul {
     text-align: center;
     opacity: 0;
 }
-.btn-orange{
+.btn-orange {
     margin-top: 1rem;
-    border-color: tomato ;
+    border-color: tomato;
     color: tomato;
     display: block;
-    transition: background-color 0.5s , color 0.5s;
+    transition: background-color 0.5s, color 0.5s;
 }
-.btn-orange:hover{
+.btn-orange:hover {
     background-color: white;
     color: tomato;
 }
@@ -127,26 +122,23 @@ ul {
 
 /* popup window start */
 
-.item-caption
-{
+.item-caption {
     bottom: 10%;
     width: 80%;
-    left: 10%;;
+    left: 10%;
 }
 
-.popUp-window
-{
+.popUp-window {
     display: none;
     position: fixed;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.window-inner
-{
+.window-inner {
     text-align: center;
     width: 50%;
     background-size: 100% 100%;
@@ -154,104 +146,118 @@ ul {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    
 }
 
-.window-inner .popUp-img{
+.window-inner .popUp-img {
     margin-top: 10px;
-   width: 35%;
-   height: 170px;
-   border-radius: 50%;
+    width: 35%;
+    height: 170px;
+    border-radius: 50%;
 }
 
-.meal-heading{
+.meal-heading {
     padding: 1rem 0;
     text-transform: capitalize;
     font-weight: 700;
 }
 
-.meal-details{
+.meal-details {
     height: 39vh;
     width: 95%;
     margin: 0 auto;
     margin-bottom: 1rem;
 }
-.meal-details .section-header{
+.meal-details .section-header {
     font-size: 1.5rem;
 }
-.details-list .fa-check{
+.details-list .fa-check {
     margin-right: 1rem;
     color: tomato;
 }
 .details-list li {
     padding: 5px 0;
 }
-#close
-{
+#close {
     position: absolute;
     right: 5%;
-    top : 5%
+    top: 5%;
 }
 
-#closeIcon{
+#closeIcon {
     cursor: pointer;
     position: absolute;
     top: 5%;
     right: 5%;
 }
-.show
-{
+.show {
     display: flex;
     animation-name: popUp;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
-@keyframes popUp{
-    0%{transform: scale(1);}
-    100%{transform: scale(1.1);}
+@keyframes popUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
-.hide
-{
+.hide {
     animation-name: popOff;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
-@keyframes popOff{
-    0%{transform: scale(1.1);}
-    100%{transform: scale(0);}
+@keyframes popOff {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
-.fa-arrow-alt-circle-left, .fa-arrow-alt-circle-right{
+.fa-arrow-alt-circle-left,
+.fa-arrow-alt-circle-right {
     cursor: pointer;
     position: relative;
-} 
-
+}
 
 /* popup window end */
-/* reponsive settings */ 
+/* reponsive settings */
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
+    .cat-item {
+        max-width: 49%;
+    }
     .col-sm-4 {
         max-width: 32%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .col-md-6{
+    .col-md-6 {
         max-width: 48%;
     }
 }
 
-@media (min-width: 992px) { 
-    .col-md-4{
+@media (min-width: 992px) {
+    .col-md-4 {
         max-width: 31%;
     }
-    .col-md-6{
+    .col-md-6 {
         max-width: 48%;
     }
-    .container{
-        max-width: 78% ;
+    .container {
+        max-width: 78%;
     }
-     .col-lg-4{
-         max-width: 31%;
-     }
+    .col-lg-4 {
+        max-width: 31%;
+    }
+   
+}
+
+@media (min-width: 1200px) {
+    .cat-item {
+        width: 20%;
+    }
 }

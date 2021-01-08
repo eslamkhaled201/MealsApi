@@ -2,7 +2,8 @@ aside{
     text-align: center;
     position: relative;
     top: 10%;
-    margin:  0 10px ;
+    width: 90%;
+    margin:  0 auto;
     overflow: hidden;
     flex-direction: row !important;
 }
